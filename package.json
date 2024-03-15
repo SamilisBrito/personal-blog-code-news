@@ -1,0 +1,14 @@
+{
+  "name": "blog-malvado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx json-server db.json"
+  },
+  "author": "Samilis",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  }
+}

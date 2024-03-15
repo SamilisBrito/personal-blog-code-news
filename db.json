@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Como Aprender Programação",
+      "text": "Aprender programação pode ser desafiador, mas com prática e persistência, é possível dominar qualquer linguagem",
+      "createdAt": 1674672000000,
+      "updatedAt": 1674672000000,
+      "tags": [
+        1,
+        3
+      ],
+      "author": "João Silva",
+      "image": "../imgs/Rectangle-5.png",
+      "alt": "mesa com computador"
+    },
+    {
+      "id": 2,
+      "title": "Dominando JavaScript: Do Básico ao Avançado",
+      "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
+      "createdAt": 1719283200000,
+      "updatedAt": 1719283200000,
+      "tags": [
+        3,
+        4
+      ],
+      "author": "Maria Cecilia",
+      "image": "../imgs/homem.webp",
+      "alt": "homem escrevendo código"
+    },
+    {
+      "id": 3,
+      "title": "Desenvolvimento Web com HTML, CSS e JavaScript",
+      "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
+      "createdAt": 1719283200000,
+      "updatedAt": 1719283200000,
+      "tags": [
+        1
+      ],
+      "author": "Maria Souza",
+      "image": "../imgs/homem.webp",
+      "alt": "homem escrevendo código"
+    },
+    {
+      "id": 4,
+      "title": "Introdução à Inteligência Artificial",
+      "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
+      "createdAt": 1719283200000,
+      "updatedAt": 1719283200000,
+      "tags": [
+        1,
+        2
+      ],
+      "author": "Maria Souza",
+      "image": "../imgs/homem.webp",
+      "alt": "homem escrevendo código"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Programação"
+    },
+    {
+      "id": 2,
+      "name": "Aprendizado"
+    },
+    {
+      "id": 3,
+      "name": "IA"
+    },
+    {
+      "id": 4,
+      "name": "Tecnologia"
+    },
+    {
+      "id": 5,
+      "name": "New"
+    }
+  ]
+}
