@@ -164,7 +164,7 @@ function postsNotFound(idParent){
 
     const SECONDARY_TITLE = document.createElement('h2');
     SECONDARY_TITLE.classList.add('font-bold', 'text-4xl', 'text-center', 'text-slate-600');
-    SECONDARY_TITLE.textContent = 'Posts não encontrado';
+    SECONDARY_TITLE.textContent = 'Posts não encontrados';
 
     section.appendChild(SECONDARY_TITLE);
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Jost", "ui-sans-serif", "system-ui"],
+          },
+        },
+      };
+    </script>
+    <title>Blog</title>
+  </head>
+  <body class="bg-slate-900 mt-16 text-slate-100">
+    <header id="header" class="grid justify-items-center">
+      <img class="mb-8" src="../imgs/icon.png" alt="icone" />
+      <img class="mb-6" src="../imgs/Code News.png" alt="code news" />
+      <p class="mb-8 text-slate-500 font-light">
+        O seu guia para a arte da programação
+      </p>
+      <hr class="w-3/5 h-0.5 bg-slate-800 border-0 mb-8" />
+    </header>
+
+    <main id="all-posts" class="mx-auto w-3/5 mb-32">
+      <div class="mx-auto max-w-7xl flex justify-between mb-24">
+        <h2>Criar / Editar</h2>
+        <button class="bg-slate-800 p-1 rounded">
+          <img src="../imgs/trash.svg" alt="" />
+        </button>
+      </div>
+      <form action="">
+        <fieldset class="flex flex-col mb-8">
+          <label for="author">Autor</label>
+          <input
+            id="author"
+            class="h-12 rounded bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-600 p-3"
+            type="text"
+            required
+          />
+        </fieldset>
+        <fieldset class="flex flex-col mb-8">
+          <label for="title">Título</label>
+          <input
+            id="title"
+            class="h-12 rounded bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-600 p-3"
+            type="text"
+            required
+          />
+        </fieldset>
+        <fieldset class="flex flex-col mb-8">
+          <label for="select-tag">Tags</label>
+          <select
+            id="select-tag"
+            class="h-12 rounded bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-600 p-3"
+            name="select"
+            required
+          >
+            <option value="" selected></option>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </select>
+        </fieldset>
+        <fieldset class="flex flex-col mb-8">
+          <label for="text">Conteúdo</label>
+          <textarea
+            id="text"
+            name="text"
+            class="rounded bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-600 p-3"
+            rows="10"
+            cols="33"
+            required
+          >
+          </textarea>
+        </fieldset>
+
+        <div class="flex justify-end gap-9">
+          <button id="btn-cancel" class="bg-slate-500 py-2 px-4 rounded">Cancelar</button>
+          <button id="bnt-save" type="submit" class="bg-purple-600 py-2 px-4 rounded">Salvar</button>
+        </div>
+      </form>
+    </main>
+    <footer
+      class="mx-auto max-w-7xl border-t-2 border-slate-800 flex justify-between py-9 px-10"
+    >
+      <p>© Todos os direitos reservados</p>
+      <p>@SamilisBritto</p>
+    </footer>
+    <script src="../scripts/form-save-post.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Jost", "ui-sans-serif", "system-ui"],
+          },
+        },
+      };
+    </script>
+    <title>Blog</title>
+  </head>
+  <body class="bg-slate-900 mt-16 text-slate-100">
+    <header id="header" class="grid justify-items-center">
+      <img class="mb-8" src="../imgs/icon.png" alt="icone" />
+      <img class="mb-6" src="../imgs/Code News.png" alt="code news" />
+      <p class="mb-8 text-slate-500 font-light">
+        O seu guia para a arte da programação
+      </p>
+
+      <div class="flex flex-row items-center justify-center gap-4 mb-10">
+        <div
+          class="flex gap-2  bg-slate-800 py-3 px-5 rounded w-full max-w-lg border-2 border-transparent focus-within:border-purple-600"
+        >
+          <img src="../imgs/Group 1.png" alt="" />
+          <input
+            id="search-input"
+            class="bg-slate-800 placeholder:text-slate-500 w-full focus-visible:outline-none"
+            type="search"
+            placeholder="Buscar por título"
+          />
+        </div>
+        <button id="add-post" class="bg-green-700 h-full rounded px-7">Criar</button>
+      </div>
+
+      <hr class="w-3/5 h-0.5 bg-slate-800 border-0 mb-8" />
+    </header>
+
+    <main id="all-posts" class="mx-auto max-w-7xl mb-32 px-5"></main>
+    <footer
+      class="mx-auto max-w-7xl border-t-2 border-slate-800 flex justify-between py-9 px-10"
+    >
+      <p>© Todos os direitos reservados</p>
+      <p>@SamilisBritto</p>
+    </footer>
+    <script src="../scripts/management.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Como Aprender Programação",
       "text": "Aprender programação pode ser desafiador, mas com prática e persistência, é possível dominar qualquer linguagem",
       "createdAt": 1674672000000,
@@ -15,7 +15,7 @@
       "alt": "mesa com computador"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Dominando JavaScript: Do Básico ao Avançado",
       "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
       "createdAt": 1719283200000,
@@ -29,7 +29,7 @@
       "alt": "homem escrevendo código"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Desenvolvimento Web com HTML, CSS e JavaScript",
       "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
       "createdAt": 1719283200000,
@@ -42,7 +42,7 @@
       "alt": "homem escrevendo código"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Introdução à Inteligência Artificial",
       "text": "A inteligência artificial está revolucionando diversos setores, desde a medicina até a indústria automotiva",
       "createdAt": 1719283200000,
@@ -54,27 +54,51 @@
       "author": "Maria Souza",
       "image": "../imgs/homem.webp",
       "alt": "homem escrevendo código"
+    },
+    {
+      "id": "37db",
+      "author": "xcsd",
+      "title": "adsadsasd",
+      "tags": [
+        "valor3"
+      ],
+      "text": "          mzdbfjshadf",
+      "image": "../imgs/default-image.png",
+      "alt": "Imagem padrão"
+    },
+    {
+      "id": "5334",
+      "author": "xcsd",
+      "title": "adsadsasd",
+      "tags": [
+        "valor2"
+      ],
+      "text": "          dfsdsdfsfd",
+      "image": "../imgs/default-image.png",
+      "alt": "Imagem padrão",
+      "createdAt": 1710540001637,
+      "updatedAt": 1710540001637
     }
   ],
   "tags": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Programação"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Aprendizado"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "IA"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Tecnologia"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "New"
     }
   ]
