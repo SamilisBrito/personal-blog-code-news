@@ -23,6 +23,15 @@ function renderPosts(posts, tags, tagParent) {
     ARTICLE_TOPIC.classList.add('max-w-96');
     const createdAt = new Date(post.createdAt)
 
+    let postText = post.text;
+    let readMoreButton = '';
+
+    // Adiciona limite de caracteres e botão "ler mais"
+    if (postText.length > 100) {
+      postText = postText.substring(0, 100) + '...';
+      readMoreButton = '<span class="underline text-slate-100"><a href="">ler mais</a></span>';
+    }
+
     ARTICLE_TOPIC.innerHTML = `
     <img
       class="rounded mb-2 object-cover h-48 w-96"
@@ -37,8 +46,7 @@ function renderPosts(posts, tags, tagParent) {
       </p>
       <h2 class="mb-4">${[post.title]}</h2>
       <p class="text-slate-500 mb-4 text-sm">
-        ${post.text}...
-        <span class="underline text-slate-100">ler mais</span>
+      ${postText} ${readMoreButton}
       </p>
       <div class="tags flex gap-2"></div>
     </div>`
@@ -191,15 +199,10 @@ function postsNotFound(idParent){
   renderSectionsDefault()
   renderTags(tags);
 
-
-
   Object.keys(tags).forEach(idTag => {
     const elementTag = document.getElementById(idTag)
     elementTag.addEventListener('click', () => filterByTag(idTag, posts, MAIN_ELEMENT, tags, resetCheckedTags, renderSectionsDefault, clearElement, postsNotFound))
   })
-
-
-
 
   SEARCH_INPUT.addEventListener('input', () => searchInput(SEARCH_INPUT, posts, tags, MAIN_ELEMENT, renderSectionsDefault, renderSection, renderPosts, clearElement, postsNotFound))
 })()

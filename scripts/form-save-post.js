@@ -1,18 +1,28 @@
 const BASE_URL = "http://localhost:3000";
 
 async function createPostsAPI(post) {
-  let result = await fetch(`${BASE_URL}/posts`, {
+  await fetch(`${BASE_URL}/posts`, {
     method: "POST",
     body: JSON.stringify({
       ...post,
       image: "../imgs/default-image.png",
       alt: "Imagem padrão",
       createdAt: new Date().getTime(),
+      // updatedAt: new Date().getTime(),
+    }),
+  });
+}
+
+async function editPostsAPI(post, id) {
+  await fetch(`${BASE_URL}/posts/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify({
+      ...post,
       updatedAt: new Date().getTime(),
     }),
   });
-  result = await result.json();
 }
+
 async function getTags() {
   const response = await fetch(`${BASE_URL}/tags`);
   const tags = await response.json();
@@ -22,12 +32,8 @@ async function getTags() {
   }, {});
 }
 
-function navigateToManagement() {
-  window.location.href = `/pages/management.html`;
-}
-
 // tratar dados
-async function saveForm(e, action, navigateToManagement) {
+async function saveForm(e, id, createPostsAPI, editPostsAPI, navigateToManagement) {
   e.preventDefault();
 
   const author = document.getElementById("author").value;
@@ -41,20 +47,65 @@ async function saveForm(e, action, navigateToManagement) {
   }
 
   try {
-    await action({
-      author,
-      title,
-      tags: [tag],
-      text,
-    });
+    if (id) {
+      await editPostsAPI({
+        author,
+        title,
+        tags: [tag],
+        text,
+      }, id);
+    } else {
+      await createPostsAPI({
+        author,
+        title,
+        tags: [tag],
+        text,
+      });
+    }
 
-    navigateToManagement();
+    navigateToManagement(e);
   } catch (error) {
-    console.error(error);
-    window.alert("Samilis");
+    window.alert(error);
   }
 }
 
+async function render(id, deletePost, navigateToManagement) {
+  const titleForm = document.getElementById('title-form')
+  if (id) {
+
+    titleForm.textContent = 'Editar';
+    const post = await (await fetch(`${BASE_URL}/posts/${id}`)).json();
+
+    document.getElementById('author').value = post.author
+    document.getElementById('title').value = post.title
+    document.getElementById('select-tag').value = post.tags
+    document.getElementById('text').value = post.text
+
+    const PARENT = document.getElementById('primary-information');
+    const btnDelete = document.createElement('button');
+    btnDelete.classList.add("bg-slate-800", "p-1", "rounded");
+    btnDelete.id = 'btn-delete'
+    btnDelete.innerHTML = `<img src="../imgs/trash.svg" alt="" />`
+    PARENT.appendChild(btnDelete)
+
+    btnDelete.addEventListener("click", (e) => deletePost(e, id, navigateToManagement))
+
+  } else {
+    titleForm.textContent = 'Criar';
+  }
+}
+
+async function deletePost(e, id, navigateToManagement) {
+  try {
+    await fetch(`${BASE_URL}/posts/${id}`, {
+      method: "DELETE",
+    })
+    navigateToManagement(e)
+    window.alert('Post excluído com sucesso')
+  } catch (error) {
+    window.alert('Não foi possível excluír')
+  }
+}
 function selectTag(element, tags) {
   Object.entries(tags).forEach((tag) => {
     const newOption = document.createElement('option');
@@ -64,21 +115,33 @@ function selectTag(element, tags) {
   })
 }
 
+function navigateToManagement(e) {
+  e.preventDefault()
+  window.location.href = `/pages/management.html`;
+}
+
+
 
 (async function init() {
   const BTN_CANCEL = document.getElementById("btn-cancel");
   const BTN_SAVE = document.getElementById("bnt-save");
   const SELECT_TAGS = document.getElementById("select-tag");
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+
   let tags = [];
 
   tags = await getTags();
 
-  BTN_CANCEL.addEventListener("click", () => navigateToManagement());
+  selectTag(SELECT_TAGS, tags)
+
+  BTN_CANCEL.addEventListener("click", (e) => navigateToManagement(e));
 
   BTN_SAVE.addEventListener("click", (e) =>
-    saveForm(e, createPostsAPI, navigateToManagement)
+    saveForm(e, id, createPostsAPI, editPostsAPI, navigateToManagement)
   );
 
-  selectTag(SELECT_TAGS, tags)
+  render(id, deletePost, navigateToManagement);
+
 })();

@@ -15,13 +15,22 @@ async function getTags() {
 }
 
 
-function renderPosts(posts, tags, tagParent) {
+function renderPosts(posts, tags, tagParent, edit) {
   const MAIN = document.getElementById(tagParent);
   posts.forEach((post) => {
     const POST_TAGS = post.tags;
     const ARTICLE_TOPIC = document.createElement("article");
     ARTICLE_TOPIC.classList.add("max-w-96");
     const createdAt = new Date(post.createdAt);
+
+    let postText = post.text;
+    let readMoreButton = '';
+
+    // Adiciona limite de caracteres e botão "ler mais"
+    if (postText.length > 100) {
+      postText = postText.substring(0, 100) + '...';
+      readMoreButton = '<span class="underline text-slate-100"><a href="">ler mais</a></span>';
+    }
 
     ARTICLE_TOPIC.innerHTML = `
     <img
@@ -40,10 +49,10 @@ function renderPosts(posts, tags, tagParent) {
       </p>
       <h2 class="mb-4">${[post.title]}</h2>
       <p class="text-slate-500 mb-4 text-sm">
-        ${post.text}...
-        <span class="underline text-slate-100">ler mais</span>
+        ${postText} ${readMoreButton}
       </p>
-      <div class="tags flex gap-2"></div>
+      <div class="tags flex gap-2 mb-4"></div>
+      <button class='bg-purple-600 rounded w-full inline-block py-1'>Editar</button>
     </div>`;
 
     const TAGS_CONTAINER = ARTICLE_TOPIC.querySelector(".tags");
@@ -61,7 +70,11 @@ function renderPosts(posts, tags, tagParent) {
       TAGS_CONTAINER.appendChild(SPAN_TAGS);
     });
 
+    // adiciona o evento de click em cada post logo após a sua criação e informa o id
     MAIN.appendChild(ARTICLE_TOPIC);
+    ARTICLE_TOPIC.childNodes[3].childNodes[9].addEventListener('click', () => edit(post.id))
+
+
   });
 }
 
@@ -212,10 +225,9 @@ function navigateToFormAddPost(id = "") {
 }
 
 (async function init() {
-  const NEW_POSTS = "sections-news-posts";
   const POSTS_POPULAR = "sections-all-posts";
   const SEARCH_INPUT = document.getElementById("search-input");
-  const MAIN_ELEMENT = "section-main";
+  const MAIN_ELEMENT = "all-posts";
   const BUTTON_ADD_POST = document.getElementById("add-post");
 
   let posts = [];
@@ -226,20 +238,18 @@ function navigateToFormAddPost(id = "") {
 
   BUTTON_ADD_POST.addEventListener("click", () => navigateToFormAddPost());
 
-  // function renderSectionsDefault() {
-  //   renderSection(NEW_POSTS, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Novos')
-  //   renderPosts(posts.slice(0, 3), tags, NEW_POSTS);
-  //   renderSection(POSTS_POPULAR, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Todos')
-  //   renderPosts(posts, tags, POSTS_POPULAR);
-  // }
+  function renderSectionsDefault() {
+    renderSection(POSTS_POPULAR, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Todos')
+    renderPosts(posts, tags, POSTS_POPULAR, navigateToFormAddPost);
+  }
 
-  // renderSectionsDefault()
-  // renderTags(tags);
+  renderSectionsDefault()
+  renderTags(tags);
 
-  // Object.keys(tags).forEach(idTag => {
-  //   const elementTag = document.getElementById(idTag)
-  //   elementTag.addEventListener('click', () => filterByTag(idTag, posts, MAIN_ELEMENT, tags, resetCheckedTags, renderSectionsDefault, clearElement, postsNotFound))
-  // })
+  Object.keys(tags).forEach(idTag => {
+    const elementTag = document.getElementById(idTag)
+    elementTag.addEventListener('click', () => filterByTag(idTag, posts, MAIN_ELEMENT, tags, resetCheckedTags, renderSectionsDefault, clearElement, postsNotFound))
+  })
 
-  // SEARCH_INPUT.addEventListener('input', () => searchInput(SEARCH_INPUT, posts, tags, MAIN_ELEMENT, renderSectionsDefault, renderSection, renderPosts, clearElement, postsNotFound))
+  SEARCH_INPUT.addEventListener('input', () => searchInput(SEARCH_INPUT, posts, tags, MAIN_ELEMENT, renderSectionsDefault, renderSection, renderPosts, clearElement, postsNotFound))
 })();

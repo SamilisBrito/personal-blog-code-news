@@ -31,14 +31,11 @@
       <hr class="w-3/5 h-0.5 bg-slate-800 border-0 mb-8" />
     </header>
 
-    <main id="all-posts" class="mx-auto w-3/5 mb-32">
-      <div class="mx-auto max-w-7xl flex justify-between mb-24">
-        <h2>Criar / Editar</h2>
-        <button class="bg-slate-800 p-1 rounded">
-          <img src="../imgs/trash.svg" alt="" />
-        </button>
+    <main id="all-posts" class="mx-auto max-w-screen-md mb-32">
+      <div id="primary-information" class="mx-auto max-w-7xl flex justify-between mb-24">
+        <h2 id="title-form" class="text-4xl font-bold"></h2>
       </div>
-      <form action="">
+      <form>
         <fieldset class="flex flex-col mb-8">
           <label for="author">Autor</label>
           <input
@@ -65,10 +62,7 @@
             name="select"
             required
           >
-            <option value="" selected></option>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
+            <option value="" disabled selected></option>
           </select>
         </fieldset>
         <fieldset class="flex flex-col mb-8">
@@ -80,13 +74,20 @@
             rows="10"
             cols="33"
             required
-          >
-          </textarea>
+          ></textarea>
         </fieldset>
 
         <div class="flex justify-end gap-9">
-          <button id="btn-cancel" class="bg-slate-500 py-2 px-4 rounded">Cancelar</button>
-          <button id="bnt-save" type="submit" class="bg-purple-600 py-2 px-4 rounded">Salvar</button>
+          <button id="btn-cancel" class="bg-slate-500 py-2 px-4 rounded">
+            Cancelar
+          </button>
+          <button
+            id="bnt-save"
+            type="submit"
+            class="bg-purple-600 py-2 px-4 rounded"
+          >
+            Salvar
+          </button>
         </div>
       </form>
     </main>
