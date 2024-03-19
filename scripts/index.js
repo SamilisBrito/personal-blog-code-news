@@ -29,7 +29,7 @@ function renderPosts(posts, tags, tagParent) {
     // Adiciona limite de caracteres e botão "ler mais"
     if (postText.length > 100) {
       postText = postText.substring(0, 100) + '...';
-      readMoreButton = '<span class="underline text-slate-100"><a href="">ler mais</a></span>';
+      readMoreButton = '<span class="underline text-slate-100 cursor-pointer hover:text-purple-600">ler mais</span>';
     }
 
     ARTICLE_TOPIC.innerHTML = `
@@ -42,7 +42,7 @@ function renderPosts(posts, tags, tagParent) {
       <p class="mb-3">
         <span>${post.author}</span> -
         <span class="text-slate-500">${createdAt.getDate()}, ${createdAt.toLocaleString('pt-br', { month: 'long' })} de ${createdAt.getFullYear()}</span>
-        <span class="text-slate-500">${createdAt.getHours()}:${createdAt.getMinutes()}h</span>
+        <span class="text-slate-500">às ${createdAt.getHours()}:${createdAt.getMinutes()}h</span>
       </p>
       <h2 class="mb-4">${[post.title]}</h2>
       <p class="text-slate-500 mb-4 text-sm">
@@ -61,8 +61,12 @@ function renderPosts(posts, tags, tagParent) {
     });
 
     MAIN.appendChild(ARTICLE_TOPIC);
-
+    ARTICLE_TOPIC.childNodes[3].childNodes[5].childNodes[1].addEventListener('click', () => openPage(post.id))
   });
+}
+
+function openPage(id = "") {
+  window.location.href = `/pages/content.html?id=${id}`;
 }
 
 function renderTags(tags) {
