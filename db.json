@@ -5,51 +5,37 @@
       "title": "Como Aprender Programação",
       "text": "Lógica de Programação e Algoritmos: Antes de mergulhar nas linguagens de programação, é essencial entender a lógica por trás da programação. A lógica de programação é como o cérebro do computador funciona. Recomendo começar por aqui.\nEscolha uma Linguagem: Existem várias linguagens de programação, como Python, JavaScript, Java, C++, entre outras. Escolha uma linguagem que se alinhe aos seus objetivos e interesses. Python é uma ótima escolha para iniciantes devido à sua simplicidade e versatilidade.\nRecursos Online Gratuitos:\nSololearn: Um aplicativo móvel gratuito que oferece cursos interativos em várias linguagens de programação.\nCS50 (Harvard): Um curso online gratuito de ciência da computação que abrange conceitos fundamentais.\nProgramming with a Purpose (Princeton): Outro excelente curso online gratuito.\nPlano de Estudos:\nLógica de Programação: Comece com conceitos como loops, condicionais e estruturas de dados.\nHTML e CSS: Aprenda a criar páginas web básicas.\nJavaScript: Explore a linguagem para adicionar interatividade às suas páginas web.\nBanco de Dados: Entenda como armazenar e recuperar informações.\nFrameworks e Bibliotecas: Explore ferramentas como React, Angular ou Django.\nPrática e Projetos: Aprender programação é como aprender um instrumento musical. Pratique regularmente e construa projetos pequenos. Isso ajudará a consolidar seus conhecimentos.\nComunidade e Fóruns: Participe de comunidades online, como o Stack Overflow, onde você pode fazer perguntas e aprender com outros desenvolvedores.\nPersistência e Paciência: A programação pode ser desafiadora, mas não desista. Continue aprendendo, resolvendo problemas e construindo coisas incríveis.\nLembre-se de que cada pessoa tem seu próprio ritmo de aprendizado. Divirta-se explorando o mundo da programação e boa sorte! 🚀👩‍💻",
       "createdAt": 1674672000000,
-      "updatedAt": 1710630895779,
+      "updatedAt": 1710787089364,
       "tags": [
-        "1"
+        "2"
       ],
       "author": "João Silva",
       "image": "../imgs/Rectangle-5.png",
       "alt": "mesa com computador"
     },
     {
-      "id": "56f5",
+      "id": "3310",
       "author": "Samilis",
-      "title": "Programação - o básico",
+      "title": "A mais linda",
       "tags": [
-        "1"
+        "4"
       ],
-      "text": "Programação é o processo de criar e manter scripts que instruem um computador a realizar tarefas específicas. É uma habilidade essencial no mundo digital, pois permite que criemos softwares, aplicativos e sistemas que facilitam a vida das pessoas. A programação envolve escrever código em linguagens de programação, como Python, Java ou JavaScript, e requer um entendimento de lógica, algoritmos e estruturas de dados.\n\nAqui está um resumo básico sobre programação:\n\nO que é programação? É a arte de escrever instruções para que um computador execute tarefas. O código escrito em uma linguagem de programação precisa ser preciso e sem ambiguidades para que o computador possa entender e executar corretamente1.\nImportância da programação: Com o avanço tecnológico, a programação tornou-se fundamental para o desenvolvimento de softwares que operam dispositivos como smartphones, tablets e computadores2.\nPrimeiros passos: Para quem está começando, é recomendável aprender as noções básicas de lógica de programação e algoritmos. Depois, pode-se escolher uma linguagem de programação e começar a praticar a escrita de código1.\nLinguagens populares: Algumas das linguagens de programação mais populares incluem HTML (para estruturação de páginas web), Python (conhecida por sua simplicidade e versatilidade), Java (usada em muitos sistemas corporativos) e JavaScript (essencial para interatividade em websites)1.\nAprendizado contínuo: A área de programação está sempre evoluindo, com novas linguagens e tecnologias surgindo regularmente. Portanto, é importante manter-se atualizado e continuar aprendendo1.\nSe você estiver interessado em aprender mais sobre programação, há muitos recursos online, incluindo cursos e tutoriais que podem ajudá-lo a começar. A prática constante e a resolução de problemas reais são as melhores maneiras de aprimorar suas habilidades de programação.\n",
+      "text": "O gato ou gato doméstico é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação. Ocupando o topo da cadeia alimentar, é predador natural de diversos animais, como roedores, pássaros, lagartixas e alguns insetos.",
       "image": "../imgs/default-image.png",
       "alt": "Imagem padrão",
-      "createdAt": 1710630969638,
-      "updatedAt": 1710632449587
+      "createdAt": 1710796349619
     },
     {
-      "id": "1f13",
+      "id": "abe0",
       "author": "Samilis",
-      "title": "Tralala",
+      "title": "dnjvcals sdkcjsaldkcvns sdlkvjsd",
       "tags": [
         "5"
       ],
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n",
+      "text": "O erro \"Uncaught SyntaxError: Identifier 'BASE_URL' has already been declared\" ocorre quando você tenta declarar uma variável ou constante com o mesmo nome mais de uma vez no mesmo escopo. Isso pode acontecer se você estiver importando um arquivo ou módulo que também declara a mesma variável BASE_URL.\n\nPara corrigir esse erro, verifique se a variável BASE_URL está sendo declarada mais de uma vez no mesmo arquivo ou em arquivos diferentes que são importados no mesmo escopo. Se necessário, renomeie a variável em um dos lugares para evitar conflitos de nome.",
       "image": "../imgs/default-image.png",
       "alt": "Imagem padrão",
-      "createdAt": 1710632786580
-    },
-    {
-      "id": "caf6",
-      "author": "Samilis",
-      "title": "test",
-      "tags": [
-        "3"
-      ],
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n",
-      "image": "../imgs/default-image.png",
-      "alt": "Imagem padrão",
-      "createdAt": 1710632860095,
-      "updatedAt": 1710632877311
+      "createdAt": 1710804465798
     }
   ],
   "tags": [
