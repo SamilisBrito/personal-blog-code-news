@@ -38,7 +38,6 @@ function renderSectionsContent(id, posts) {
             `
         }
     })
-    console.log(PARENT.childNodes)
     PARENT.childNodes[7].addEventListener('click', (e) => navigateToIndex(e))
 }
 

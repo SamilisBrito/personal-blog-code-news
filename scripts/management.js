@@ -20,7 +20,7 @@ function renderPosts(posts, tags, tagParent, edit) {
   posts.forEach((post) => {
     const POST_TAGS = post.tags;
     const ARTICLE_TOPIC = document.createElement("article");
-    ARTICLE_TOPIC.classList.add("max-w-96");
+    ARTICLE_TOPIC.classList.add("max-w-96", 'cursor-pointer');
     const createdAt = new Date(post.createdAt);
 
     let postText = post.text;

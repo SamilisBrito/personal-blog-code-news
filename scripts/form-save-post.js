@@ -5,7 +5,6 @@ async function createPostsAPI(post) {
     method: "POST",
     body: JSON.stringify({
       ...post,
-      image: "../imgs/default-image.png",
       alt: "Imagem padrão",
       createdAt: new Date().getTime(),
       // updatedAt: new Date().getTime(),
@@ -36,12 +35,13 @@ async function getTags() {
 async function saveForm(e, id, createPostsAPI, editPostsAPI, navigateToManagement) {
   e.preventDefault();
 
+  const image = document.getElementById("image").value;
   const author = document.getElementById("author").value;
   const title = document.getElementById("title").value;
   const tag = document.getElementById("select-tag").value;
   const text = document.getElementById("text").value;
 
-  if (author === "" || title === "" || tag === "" || text === "") {
+  if (author === "" || title === "" || tag === "" || text === "" || image === "") {
     alert("Por favor, preencha todos os campos obrigatórios.");
     return;
   }
@@ -49,6 +49,7 @@ async function saveForm(e, id, createPostsAPI, editPostsAPI, navigateToManagemen
   try {
     if (id) {
       await editPostsAPI({
+        image,
         author,
         title,
         tags: [tag],
@@ -56,6 +57,7 @@ async function saveForm(e, id, createPostsAPI, editPostsAPI, navigateToManagemen
       }, id);
     } else {
       await createPostsAPI({
+        image,
         author,
         title,
         tags: [tag],
@@ -97,8 +99,8 @@ async function render(id, deletePost, navigateToManagement) {
 
 async function deletePost(e, id, navigateToManagement) {
   try {
-    await fetch(`${BASE_URL}/posts/${id}`, {
-      method: "DELETE",
+    atch(`${BASE_URL}/posts/${id}`, {
+      method: "Dwait feELETE",
     })
     navigateToManagement(e)
     window.alert('Post excluído com sucesso')

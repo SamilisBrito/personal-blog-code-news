@@ -20,7 +20,7 @@ function renderPosts(posts, tags, tagParent) {
 
     const POST_TAGS = post.tags;
     const ARTICLE_TOPIC = document.createElement('article');
-    ARTICLE_TOPIC.classList.add('max-w-96');
+    ARTICLE_TOPIC.classList.add('max-w-96', 'cursor-pointer');
     const createdAt = new Date(post.createdAt)
 
     let postText = post.text;
@@ -29,7 +29,7 @@ function renderPosts(posts, tags, tagParent) {
     // Adiciona limite de caracteres e botão "ler mais"
     if (postText.length > 100) {
       postText = postText.substring(0, 100) + '...';
-      readMoreButton = '<span class="underline text-slate-100 cursor-pointer hover:text-purple-600">ler mais</span>';
+      readMoreButton = '<span class="underline text-slate-100 hover:text-purple-600">ler mais</span>';
     }
 
     ARTICLE_TOPIC.innerHTML = `
@@ -61,7 +61,7 @@ function renderPosts(posts, tags, tagParent) {
     });
 
     MAIN.appendChild(ARTICLE_TOPIC);
-    ARTICLE_TOPIC.childNodes[3].childNodes[5].childNodes[1].addEventListener('click', () => openPage(post.id))
+    ARTICLE_TOPIC.addEventListener('click', () => openPage(post.id))
   });
 }
 

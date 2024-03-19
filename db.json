@@ -21,9 +21,10 @@
         "4"
       ],
       "text": "O gato ou gato doméstico é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação. Ocupando o topo da cadeia alimentar, é predador natural de diversos animais, como roedores, pássaros, lagartixas e alguns insetos.",
-      "image": "../imgs/default-image.png",
+      "image": "https://avatars.githubusercontent.com/u/63266170?s=400&u=a2a58d9de8ec726ab991828e1d38d182e93907a0&v=4",
       "alt": "Imagem padrão",
-      "createdAt": 1710796349619
+      "createdAt": 1710796349619,
+      "updatedAt": 1710810467607
     },
     {
       "id": "abe0",
@@ -33,9 +34,35 @@
         "5"
       ],
       "text": "O erro \"Uncaught SyntaxError: Identifier 'BASE_URL' has already been declared\" ocorre quando você tenta declarar uma variável ou constante com o mesmo nome mais de uma vez no mesmo escopo. Isso pode acontecer se você estiver importando um arquivo ou módulo que também declara a mesma variável BASE_URL.\n\nPara corrigir esse erro, verifique se a variável BASE_URL está sendo declarada mais de uma vez no mesmo arquivo ou em arquivos diferentes que são importados no mesmo escopo. Se necessário, renomeie a variável em um dos lugares para evitar conflitos de nome.",
-      "image": "../imgs/default-image.png",
+      "image": "https://plus.unsplash.com/premium_photo-1710679068171-b205aeeb3ed2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "alt": "Imagem padrão",
-      "createdAt": 1710804465798
+      "createdAt": 1710804465798,
+      "updatedAt": 1710810603916
+    },
+    {
+      "id": "da7e",
+      "author": "Samilis",
+      "title": "teste da imagem",
+      "tags": [
+        "5"
+      ],
+      "text": " Um campo para editar uma URL. O valor inserido é validado para ser vazio ou uma URL absoluta válida antes de ser enviado. Quebras de linha e espaços em branco antes e após o valor inserido são automaticamente removidos. Você pode usar atributos como pattern e maxlength para restringir os valores inseridos no controle. As pseudoclasses CSS :valid e :invalid são aplicadas apropriadamente.",
+      "alt": "Imagem padrão",
+      "createdAt": 1710809619257,
+      "image": "https://plus.unsplash.com/premium_photo-1710361779133-dc0dafa82ee4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "updatedAt": 1710809812703
+    },
+    {
+      "id": "caf3",
+      "image": "https://plus.unsplash.com/premium_photo-1710294628449-a5d79727eab9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "author": "Samilis",
+      "title": "efasdgfas",
+      "tags": [
+        "5"
+      ],
+      "text": "asdfasdfsadfas",
+      "alt": "Imagem padrão",
+      "createdAt": 1710809769795
     }
   ],
   "tags": [
