@@ -29,7 +29,7 @@ function renderPosts(posts, tags, tagParent, edit) {
     // Adiciona limite de caracteres e botão "ler mais"
     if (postText.length > 100) {
       postText = postText.substring(0, 100) + '...';
-      readMoreButton = '<span class="underline text-slate-100"><a href="">ler mais</a></span>';
+      readMoreButton = '<span class="underline text-slate-100 cursor-pointer hover:text-purple-600">ler mais</span>';
     }
 
     ARTICLE_TOPIC.innerHTML = `
@@ -73,10 +73,11 @@ function renderPosts(posts, tags, tagParent, edit) {
     // adiciona o evento de click em cada post logo após a sua criação e informa o id
     MAIN.appendChild(ARTICLE_TOPIC);
     ARTICLE_TOPIC.childNodes[3].childNodes[9].addEventListener('click', () => edit(post.id))
-
+    ARTICLE_TOPIC.childNodes[3].childNodes[5].childNodes[1].addEventListener('click', () => openPage(post.id))
 
   });
 }
+
 
 function renderTags(tags) {
   const HEADER = document.querySelector("#header");
@@ -224,6 +225,10 @@ function navigateToFormAddPost(id = "") {
   window.location.href = `/pages/form-save-post.html?id=${id}`;
 }
 
+function openPage(id = "") {
+  window.location.href = `/pages/content.html?id=${id}`;
+}
+
 (async function init() {
   const POSTS_POPULAR = "sections-all-posts";
   const SEARCH_INPUT = document.getElementById("search-input");
@@ -239,7 +244,7 @@ function navigateToFormAddPost(id = "") {
   BUTTON_ADD_POST.addEventListener("click", () => navigateToFormAddPost());
 
   function renderSectionsDefault() {
-    renderSection(POSTS_POPULAR, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Todos')
+    renderSection(POSTS_POPULAR, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'])
     renderPosts(posts, tags, POSTS_POPULAR, navigateToFormAddPost);
   }
 
