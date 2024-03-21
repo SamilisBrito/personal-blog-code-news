@@ -32,7 +32,7 @@ function renderSectionsContent(id, posts) {
               <p class="text-xl leading-9 mb-5">
                 ${post.text}
               </p>
-              <button id="btn-cancel" class="bg-slate-500 py-2 px-4 rounded flex gap-1">
+              <button id="btn-cancel" class="bg-slate-500 py-2 px-4 rounded flex gap-1 hover:bg-slate-600">
                 <img src="../imgs/arrow-left.svg" alt="icone de voltar"> Voltar
               </button>
             `

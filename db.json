@@ -31,13 +31,13 @@
       "author": "Samilis",
       "title": "dnjvcals sdkcjsaldkcvns sdlkvjsd",
       "tags": [
-        "5"
+        "1"
       ],
       "text": "O erro \"Uncaught SyntaxError: Identifier 'BASE_URL' has already been declared\" ocorre quando você tenta declarar uma variável ou constante com o mesmo nome mais de uma vez no mesmo escopo. Isso pode acontecer se você estiver importando um arquivo ou módulo que também declara a mesma variável BASE_URL.\n\nPara corrigir esse erro, verifique se a variável BASE_URL está sendo declarada mais de uma vez no mesmo arquivo ou em arquivos diferentes que são importados no mesmo escopo. Se necessário, renomeie a variável em um dos lugares para evitar conflitos de nome.",
       "image": "https://plus.unsplash.com/premium_photo-1710679068171-b205aeeb3ed2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "alt": "Imagem padrão",
       "createdAt": 1710804465798,
-      "updatedAt": 1710810603916
+      "updatedAt": 1711042336559
     },
     {
       "id": "da7e",
@@ -58,11 +58,12 @@
       "author": "Samilis",
       "title": "efasdgfas",
       "tags": [
-        "5"
+        "4"
       ],
       "text": "asdfasdfsadfas",
       "alt": "Imagem padrão",
-      "createdAt": 1710809769795
+      "createdAt": 1710809769795,
+      "updatedAt": 1711042351649
     }
   ],
   "tags": [

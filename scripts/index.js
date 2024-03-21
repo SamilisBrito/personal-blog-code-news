@@ -193,9 +193,11 @@ function postsNotFound(idParent){
   tags = await getTags();
   posts = await getPosts();
 
+  const newPostsOrdenados = posts.slice().sort((a, b) => b.createdAt - a.createdAt);
+  
   function renderSectionsDefault() {
     renderSection(NEW_POSTS, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Novos')
-    renderPosts(posts.slice(0, 3), tags, NEW_POSTS);
+    renderPosts(newPostsOrdenados.slice(0, 3), tags, NEW_POSTS);
     renderSection(POSTS_POPULAR, MAIN_ELEMENT, ['grid', 'grid-cols-3', 'gap-12', 'mb-10'], 'Todos')
     renderPosts(posts, tags, POSTS_POPULAR);
   }

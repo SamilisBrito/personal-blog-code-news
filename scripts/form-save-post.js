@@ -78,6 +78,7 @@ async function render(id, deletePost, navigateToManagement) {
     titleForm.textContent = 'Editar';
     const post = await (await fetch(`${BASE_URL}/posts/${id}`)).json();
 
+    document.getElementById('image').value = post.image
     document.getElementById('author').value = post.author
     document.getElementById('title').value = post.title
     document.getElementById('select-tag').value = post.tags
@@ -108,6 +109,7 @@ async function deletePost(e, id, navigateToManagement) {
     window.alert('Não foi possível excluír')
   }
 }
+
 function selectTag(element, tags) {
   Object.entries(tags).forEach((tag) => {
     const newOption = document.createElement('option');
@@ -121,7 +123,6 @@ function navigateToManagement(e) {
   e.preventDefault()
   window.location.href = `/pages/management.html`;
 }
-
 
 
 (async function init() {
