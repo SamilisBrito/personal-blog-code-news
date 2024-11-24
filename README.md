@@ -20,10 +20,9 @@ Clone o projeto:
 
 git clone [[https://github.com/seu-usuario/code-news.git](https://github.com/SamilisBrito/personal-blog)](https://github.com/SamilisBrito/personal-blog-code-news)
 
-cd personal-blog
+cd personal-blog-code-news
 
-
-Instale as dependências:
+### Instale as dependências:
 npm install
 Inicie o servidor JSON:
 npm run dev 
