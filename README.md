@@ -20,7 +20,7 @@ Clone o projeto:
 
 bash
 Copiar código
-git clone [https://github.com/seu-usuario/code-news.git](https://github.com/SamilisBrito/personal-blog)
+git clone [[https://github.com/seu-usuario/code-news.git](https://github.com/SamilisBrito/personal-blog)](https://github.com/SamilisBrito/personal-blog-code-news)
 cd personal-blog
 
 
