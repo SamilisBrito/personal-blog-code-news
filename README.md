@@ -1,21 +1,21 @@
-#Code News - README
+# Code News - README
 Code News é um blog minimalista desenvolvido para praticar HTML5, CSS3, JavaScript e JSON Server. Ele conta com duas interfaces principais: uma para leitura de postagens e outra para gerenciamento.
 
-##🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 HTML5, CSS3, Tailwind CSS
 JavaScript para manipulação do DOM
 JSON Server para simulação de API
 Node.js e NPM para gerenciar dependências
 
-##📋 Funcionalidades
-###Parte do Usuário:
+## 📋 Funcionalidades
+### Parte do Usuário:
 Listagem de postagens com busca e filtro por tags.
 Visualização de postagens com título, imagem e conteúdo.
-###Parte do Administrador:
+### Parte do Administrador:
 Adicionar, editar e excluir postagens.
 Busca por título para facilitar o gerenciamento.
 
-##🚀 Como Executar
+## 🚀 Como Executar
 Clone o projeto:
 
 bash
